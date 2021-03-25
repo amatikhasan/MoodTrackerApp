@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF1E90FF</color>
+    <color name="colorPrimaryDark">#B33395ff</color>
+    <color name="colorAccent">#FF00BFFF</color>
+
+    <color name="white">#ffffff</color>
+    <drawable name="bg_screen1">#B33395ff</drawable>
+    <color name="grey_5">#f2f2f2</color>
+    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_60">#666666</color>
+    <color name="grey_80">#37474F</color>
+    <color name="grey_90">#263238</color>
+
+    <color name="very_happy">#FF32CD32</color>
+    <color name="happy">#FF1E90FF</color>
+    <color name="neutral">#FFFFA500</color>
+    <color name="sad">#FF808080</color>
+    <color name="depressed">#FFFF6347</color>
+</resources>

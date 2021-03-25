@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.ViewJournal">
+
+    <include
+        layout="@layout/toolbar_layout" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/ivItemImage"-->
+                    <!--android:layout_width="160dp"-->
+                    <!--android:layout_height="120dp"-->
+                    <!--android:layout_margin="10dp"-->
+                    <!--android:scaleType="centerCrop"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:contentDescription="image"-->
+                    <!--android:src="@drawable/default_image" />-->
+
+                <com.joooonho.SelectableRoundedImageView
+                    android:id="@+id/ivItemImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_image"
+                    app:sriv_border_color="@color/grey_10"
+                    app:sriv_border_width="1dp"
+                    app:sriv_left_top_corner_radius="4dp"
+                    app:sriv_right_top_corner_radius="4dp"
+                    app:sriv_left_bottom_corner_radius="4dp"
+                    app:sriv_right_bottom_corner_radius="4dp"/>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="8dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvDateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date Time"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/ivMood"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/happy" />
+
+                <TextView
+                    android:id="@+id/tvMood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Happy"
+                    android:textSize="16sp"
+                    android:textColor="@color/happy" />
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:id="@+id/tvBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Description"
+                android:textSize="16sp"/>
+
+
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Location: "
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:id="@+id/tvTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Tagged Friends: "
+                android:textSize="14sp"/>
+
+
+            <!-- an empty view for full scroll view -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

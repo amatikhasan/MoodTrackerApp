@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:cardMaxElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/llMood"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp">
+
+                <ImageView
+                    android:id="@+id/ivMood"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/happy" />
+
+                <TextView
+                    android:id="@+id/tvMood"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Happy"
+                    android:textSize="16sp"
+                    android:textColor="@color/happy" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="8dp"
+               android:layout_toStartOf="@id/divider1"
+                android:text="Location"
+                android:textSize="12sp" />
+
+            <View
+                android:id="@+id/divider1"
+                android:background="@color/grey_40"
+                android:layout_toStartOf="@id/tvDateTime"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="1dp"
+                android:layout_height="12dp"/>
+
+            <TextView
+                android:id="@+id/tvDateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentEnd="true"
+                android:text="DateTime"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_weight=".40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="8dp"
+                android:layout_marginStart="12dp">
+
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Title"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="8dp"
+                    android:ellipsize="marquee"
+                    android:layout_below="@id/tvTitle"
+                    android:gravity="center_vertical"
+                    android:text="Body"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_marginStart="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="@color/grey_40"
+                    android:layout_width="1dp"
+                    android:layout_height="80dp"/>
+
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".70"
+                android:gravity="center"
+                android:paddingBottom="4dp"
+               >
+
+                <!--<ImageView-->
+                <!--android:id="@+id/image"-->
+                <!--android:layout_width="120dp"-->
+                <!--android:layout_height="80dp"-->
+                <!--android:layout_margin="8dp"-->
+                <!--android:src="@drawable/image" />-->
+                <com.joooonho.SelectableRoundedImageView
+                    android:id="@+id/image"
+                    android:layout_width="120dp"
+                    android:layout_height="90dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_image"
+                    app:sriv_border_color="@color/grey_10"
+                    app:sriv_border_width="1dp"
+                    app:sriv_left_top_corner_radius="4dp"
+                    app:sriv_right_top_corner_radius="4dp"
+                    app:sriv_left_bottom_corner_radius="4dp"
+                    app:sriv_right_bottom_corner_radius="4dp"/>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

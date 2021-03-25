@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mood Tracker</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="bottom_sheet_behavior">android.support.design.widget.BottomSheetBehavior</string>
+</resources>
